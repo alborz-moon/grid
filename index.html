@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>Grid</title>
+    <Style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: iran-sans;
+        }
+        .silver{
+            background-color: silver;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .red{
+            background-color: tomato;
+        }
+        .blue{
+            background-color: turquoise;
+        }
+        h1{
+            text-align: center;
+            background-color:cornflowerblue;
+            color: darkslategrey;
+        }
+        .container{
+            display: grid;
+            padding: 10px;
+            grid-template-columns: auto auto auto auto auto ;
+            grid-template-rows: auto auto auto auto auto auto auto;
+            grid-gap: 10px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            /* justify-content: space-around;
+            align-content: space-around; */
+
+        }
+        .container > div{
+            background-color: rgb(255, 187, 0);
+            padding: 25px 0px;
+            font-size: 25px;
+            /* margin: 10px; */
+        }
+        .child1{
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column: 1 / 4 ;
+            grid-row: 1/3;
+        }
+        .child2{
+            grid-column: 4 / 5 ;
+            grid-row: 1/2;
+        }
+        .child3{
+            grid-column: 5 / 6;
+            grid-row: 1/2;
+        }
+        .child4{
+            grid-column: 4 / 5 ;
+            grid-row: 2/3;
+        }
+        .child5{
+            grid-column: 5/6;
+            grid-row: 2/3;
+        }
+        .child6{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .child7{
+            grid-column: 1 / 2;
+            grid-row: 4/5;
+        }
+        .child8{
+            grid-column: 2 / 5;
+            grid-row: 3/5;
+        }
+        .child9{
+            grid-column: 5 / 6;
+            grid-row: 3/4;
+        }
+        .child10{
+            grid-column: 5 / 6;
+            grid-row: 4/5;
+        }
+        .child11{
+            grid-column: 1/3;
+            grid-row: 5/7
+        }
+        .child12{
+            grid-row: 5/6;
+            grid-column: 3/4;
+        }
+        .child13{
+            grid-row: 6/7;
+            grid-column: 3/4;
+        }
+        .child14{
+            grid-column: 4/6;
+            grid-row: 5/7;
+        }
+        .child15{
+            grid-column: 1/6;
+            grid-row: 7/23;
+        }
+        .contarea{
+            display: grid;
+            padding: 10px;
+            grid-gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            grid-template-areas: 'menu menu menu menu menu menu menu menu menu menu menu menu' 
+            'topic topic topic slider slider slider slider slider slider slider slider slider'
+            'sidebar sidebar sidebar main main main main main main sidebarleft sidebarleft sidebarleft'
+            'sidebar sidebar sidebar footer footer footer footer footer footer footer footer footer';
+        }
+        .contarea > div {
+            padding: 25px 0px;
+            font-size: 18px; 
+            text-align: center;
+            background-color: tomato;
+        }   
+        .child16{
+            grid-area: menu ;
+        }
+        .child17{
+            grid-area: topic ;
+        }
+        .child18{
+            grid-area: slider;
+        }
+        .child19{
+            grid-area: sidebar;
+        }
+        .child20{
+            grid-area: main;
+        }
+        .child21{
+            grid-area: sidebarleft;
+        }
+        .child22{
+            grid-area: footer;
+        }
+        .contgrid{
+            display: grid;
+            padding: 10px;
+            grid-gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+        }
+        .contgrid > div {
+            text-align: center;
+            font-size: 18px;
+            padding: 25px 0;
+            background-color: yellowgreen;
+
+        }
+        .child23{
+            grid-column: 1/13;
+        }
+        .child24{
+            grid-column: 1/4;
+        }
+        .child25{
+            grid-column: 4/13;
+        }
+        .child26{
+            grid-column: 1/4;
+            grid-row: 3/5;
+        }
+        .child27{
+            grid-column: 4/10;
+            grid-row: 3/4;
+        }
+        .child28{
+            grid-column: 10/13;
+        }
+        .child29{
+            grid-column: 4/13;
+        }
+    </Style>
+</head>
+<body>
+    <div class="container silver">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+        <div class="child4">4</div>
+        <div class="child5">5</div> 
+        <div class="child6">6</div>
+        <div class="child7">7</div>
+        <div class="child8">8</div>
+        <div class="child9">9</div>
+        <div class="child10">10</div>
+        <div class="child11">11</div>
+        <div class="child12">12</div>  
+        <div class="child13">13</div>
+        <div class="child14">14</div>
+        <div class="child15">15</div>
+    </div>
+    <hr><h1>با area</h1>
+    <div class="contarea silver">
+        <div class="child16">منو</div>
+        <div class="child17">تاپیک ها</div>
+        <div class="child18 blue"> اسلایدرتصاویر</div>
+        <div class="child19">ساید بار</div>
+        <div class="child20">محتوا</div>
+        <div class="child21">ساید بار چپ</div>
+        <div class="child22">فوتر</div>
+    </div>
+    <hr><h1>با column و row</h1>
+    <div class="contgrid silver">
+        <div class="child23">منو</div>
+        <div class="child24">تاپیک ها</div>
+        <div class="child25"> اسلایدرتصاویر</div>
+        <div class="child26">ساید بار</div>
+        <div class="child27">محتوا</div>
+        <div class="child28">ساید بار چپ</div>
+        <div class="child29">فوتر</div>
+    </div>
+    
+</body>
+</html>
